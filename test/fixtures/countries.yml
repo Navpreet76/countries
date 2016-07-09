@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  total_strength: 1
+  aircraft: 1
+  armored_vehicles: 1
+
+two:
+  name: MyString
+  total_strength: 1
+  aircraft: 1
+  armored_vehicles: 1

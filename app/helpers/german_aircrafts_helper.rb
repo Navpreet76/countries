@@ -1,0 +1,2 @@
+module GermanAircraftsHelper
+end

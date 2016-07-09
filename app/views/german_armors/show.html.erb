@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @german_armor.name %>
+</p>
+
+<p>
+  <strong>Designation:</strong>
+  <%= @german_armor.designation %>
+</p>
+
+<p>
+  <strong>Numbers built:</strong>
+  <%= @german_armor.numbers_built %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @german_armor.description %>
+</p>
+
+<%= link_to 'Edit', edit_german_armor_path(@german_armor) %> |
+<%= link_to 'Back', german_armors_path %>

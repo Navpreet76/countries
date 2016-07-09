@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'New Country', new_country_path %>
+<%= link_to 'Aircraft', aircrafts_path %>
+<%= link_to 'Armored Vehicles', tanks_path %>
+<%= link_to 'Units', units_path %>
+<%= link_to 'Navy Vessels', navy_vessels_path %>
+
+
+<h1>Listing Countries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Total strength</th>
+      <th>Aircraft</th>
+      <th>Armored vehicles</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @countries.each do |country| %>
+      <tr>
+        <td><%= country.name %></td>
+        <td><%= country.total_strength %></td>
+        <td><%= country.aircraft %></td>
+        <td><%= country.armored_vehicles %></td>
+        <td><%= link_to 'Show', country %></td>
+        <td><%= link_to 'Edit', edit_country_path(country) %></td>
+        <td><%= link_to 'Destroy', country, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

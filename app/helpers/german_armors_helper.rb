@@ -1,0 +1,2 @@
+module GermanArmorsHelper
+end

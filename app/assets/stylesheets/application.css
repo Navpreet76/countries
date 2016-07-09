@@ -1,0 +1,25 @@
+*{
+	background-color: #FF0000;
+	font-family: Century Gothic, sans-serif;
+}
+p{
+	font-size: 25px;
+}
+table td{
+	font-size: 20px;
+	padding: 20px;
+	border: 2px solid black;
+	color: #FFFFFF;
+}
+table th{
+	font-size: 20px;
+	color: white;
+}
+h1{
+	text-align: center;
+	border-top: 15px solid black;
+
+}
+input, textarea{
+	background-color: #FFFFFF;
+}

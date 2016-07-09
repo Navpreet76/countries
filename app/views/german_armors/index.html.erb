@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing German Armors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Designation</th>
+      <th>Numbers built</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @german_armors.each do |german_armor| %>
+      <tr>
+        <td><%= german_armor.name %></td>
+        <td><%= german_armor.designation %></td>
+        <td><%= german_armor.numbers_built %></td>
+        <td><%= german_armor.description %></td>
+        <td><%= link_to 'Show', german_armor %></td>
+        <td><%= link_to 'Edit', edit_german_armor_path(german_armor) %></td>
+        <td><%= link_to 'Destroy', german_armor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New German armor', new_german_armor_path %>
+<%= link_to 'Back', countries_path %>

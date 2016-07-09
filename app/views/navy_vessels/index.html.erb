@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Navy Vessels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Designation</th>
+      <th>Strength</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @navy_vessels.each do |navy_vessel| %>
+      <tr>
+        <td><%= navy_vessel.name %></td>
+        <td><%= navy_vessel.designation %></td>
+        <td><%= navy_vessel.strength %></td>
+        <td><%= link_to 'Show', navy_vessel %></td>
+        <td><%= link_to 'Edit', edit_navy_vessel_path(navy_vessel) %></td>
+        <td><%= link_to 'Destroy', navy_vessel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Navy vessel', new_navy_vessel_path %>
+<%= link_to 'Back', countries_path %>

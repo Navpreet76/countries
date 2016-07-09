@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @country.name %>
+</p>
+
+<p>
+  <strong>Total strength:</strong>
+  <%= @country.total_strength %>
+</p>
+
+<p>
+  <strong>Aircraft:</strong>
+  <%= @country.aircraft %>
+</p>
+
+<p>
+  <strong>Armored vehicles:</strong>
+  <%= @country.armored_vehicles %>
+</p>
+
+<%= link_to 'Edit', edit_country_path(@country) %> |
+<%= link_to 'Back', countries_path %>
+<%= link_to 'Aircraft', aircrafts_path %>
+<%= link_to 'German Military Strength', german_armors_path %>
+
