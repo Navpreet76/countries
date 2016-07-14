@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160709075507) do
+ActiveRecord::Schema.define(version: 20160713033319) do
 
   create_table "aircrafts", force: :cascade do |t|
     t.string   "name"
@@ -19,6 +19,43 @@ ActiveRecord::Schema.define(version: 20160709075507) do
     t.integer  "numbers_built"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+  end
+
+  create_table "american_aircrafts", force: :cascade do |t|
+    t.string   "name"
+    t.string   "designation"
+    t.text     "description"
+    t.text     "content"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "american_armors", force: :cascade do |t|
+    t.string   "name"
+    t.string   "designation"
+    t.integer  "numbers_built"
+    t.text     "description"
+    t.text     "content"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "american_navy_vessels", force: :cascade do |t|
+    t.string   "name"
+    t.string   "designation"
+    t.text     "description"
+    t.text     "content"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "american_units", force: :cascade do |t|
+    t.string   "name"
+    t.string   "designation"
+    t.text     "description"
+    t.text     "content"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "countries", force: :cascade do |t|
@@ -48,6 +85,24 @@ ActiveRecord::Schema.define(version: 20160709075507) do
     t.datetime "updated_at",    null: false
   end
 
+  create_table "german_navy_vessels", force: :cascade do |t|
+    t.string   "name"
+    t.string   "designation"
+    t.text     "description"
+    t.text     "content"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "german_units", force: :cascade do |t|
+    t.string   "name"
+    t.string   "designation"
+    t.text     "description"
+    t.text     "content"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "navy_vessels", force: :cascade do |t|
     t.string   "name"
     t.string   "designation"
@@ -63,6 +118,13 @@ ActiveRecord::Schema.define(version: 20160709075507) do
     t.integer  "numbers_built"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+  end
+
+  create_table "united_states", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "units", force: :cascade do |t|

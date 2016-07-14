@@ -1,0 +1,2 @@
+module AmericanAircraftsHelper
+end

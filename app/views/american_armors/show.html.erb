@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @american_armor.name %>
+</p>
+
+<p>
+  <strong>Designation:</strong>
+  <%= @american_armor.designation %>
+</p>
+
+<p>
+  <strong>Numbers built:</strong>
+  <%= @american_armor.numbers_built %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @american_armor.description %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @american_armor.content %>
+</p>
+
+<%= link_to 'Edit', edit_american_armor_path(@american_armor) %> 
+<br>
+<%= link_to 'Back', american_armors_path %>

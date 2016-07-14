@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  resources :american_navy_vessels
+  resources :american_units
+  resources :american_aircrafts
+  resources :american_armors
+  resources :united_states
+  resources :german_navy_vessels
+  resources :german_units
   resources :german_aircrafts
   resources :german_armors
   resources :german_armors

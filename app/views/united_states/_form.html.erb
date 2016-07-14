@@ -1,0 +1,25 @@
+<%= form_for(@united_state) do |f| %>
+  <% if @united_state.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@united_state.errors.count, "error") %> prohibited this united_state from being saved:</h2>
+
+      <ul>
+      <% @united_state.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

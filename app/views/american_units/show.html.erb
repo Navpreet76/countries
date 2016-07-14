@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @american_unit.name %>
+</p>
+
+<p>
+  <strong>Designation:</strong>
+  <%= @american_unit.designation %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @american_unit.description %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @american_unit.content %>
+</p>
+
+<%= link_to 'Edit', edit_american_unit_path(@american_unit) %> |
+<%= link_to 'Back', american_units_path %>

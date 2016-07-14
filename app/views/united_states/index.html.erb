@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>United States of America</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @united_states.each do |united_state| %>
+      <tr>
+        <td><%= united_state.name %></td>
+        <td><%= united_state.description %></td>
+        <td><%= link_to 'Show', united_state %></td>
+        <td><%= link_to 'Edit', edit_united_state_path(united_state) %></td>
+        <td><%= link_to 'Destroy', united_state, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing American Navy Vessels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Designation</th>
+      <th>Description</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @american_navy_vessels.each do |american_navy_vessel| %>
+      <tr>
+        <td><%= american_navy_vessel.name %></td>
+        <td><%= american_navy_vessel.designation %></td>
+        <td><%= american_navy_vessel.description %></td>
+        <td><%= american_navy_vessel.content %></td>
+        <td><%= link_to 'Show', american_navy_vessel %></td>
+        <td><%= link_to 'Edit', edit_american_navy_vessel_path(american_navy_vessel) %></td>
+        <td><%= link_to 'Destroy', american_navy_vessel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New American navy vessel', new_american_navy_vessel_path %>
+<%= link_to 'Back', united_states_path %>

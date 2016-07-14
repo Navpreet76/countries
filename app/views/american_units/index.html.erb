@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing American Units</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Designation</th>
+      <th>Description</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @american_units.each do |american_unit| %>
+      <tr>
+        <td><%= american_unit.name %></td>
+        <td><%= american_unit.designation %></td>
+        <td><%= american_unit.description %></td>
+        <td><%= american_unit.content %></td>
+        <td><%= link_to 'Show', american_unit %></td>
+        <td><%= link_to 'Edit', edit_american_unit_path(american_unit) %></td>
+        <td><%= link_to 'Destroy', american_unit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New American unit', new_american_unit_path %>
+<%= link_to 'Back', united_states_path %>

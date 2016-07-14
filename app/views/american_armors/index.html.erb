@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>American Armored Vehicles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Designation</th>
+      <th>Numbers built</th>
+      <th>Description</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @american_armors.each do |american_armor| %>
+      <tr>
+        <td><%= american_armor.name %></td>
+        <td><%= american_armor.designation %></td>
+        <td><%= american_armor.numbers_built %></td>
+        <td><%= american_armor.description %></td>
+        <td><%= link_to 'Show', american_armor %></td>
+        <td><%= link_to 'Edit', edit_american_armor_path(american_armor) %></td>
+        <td><%= link_to 'Destroy', american_armor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New American armor', new_american_armor_path %>
+<br>
+<%= link_to 'Back', united_states_path %>

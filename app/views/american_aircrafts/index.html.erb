@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>American Aircraft</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Designation</th>
+      <th>Description</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @american_aircrafts.each do |american_aircraft| %>
+      <tr>
+        <td><%= american_aircraft.name %></td>
+        <td><%= american_aircraft.designation %></td>
+        <td><%= american_aircraft.description %></td>
+        <td><%= link_to 'Show', american_aircraft %></td>
+        <td><%= link_to 'Edit', edit_american_aircraft_path(american_aircraft) %></td>
+        <td><%= link_to 'Destroy', american_aircraft, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New American aircraft', new_american_aircraft_path %>
+<br>
+<%= link_to 'Back', united_states_path %>

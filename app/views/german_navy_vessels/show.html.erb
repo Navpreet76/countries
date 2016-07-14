@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @german_navy_vessel.name %>
+</p>
+
+<p>
+  <strong>Designation:</strong>
+  <%= @german_navy_vessel.designation %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @german_navy_vessel.description %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @german_navy_vessel.content %>
+</p>
+
+<%= link_to 'Edit', edit_german_navy_vessel_path(@german_navy_vessel) %> |
+<%= link_to 'Back', german_navy_vessels_path %>

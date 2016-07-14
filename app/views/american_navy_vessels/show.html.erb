@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @american_navy_vessel.name %>
+</p>
+
+<p>
+  <strong>Designation:</strong>
+  <%= @american_navy_vessel.designation %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @american_navy_vessel.description %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @american_navy_vessel.content %>
+</p>
+
+<%= link_to 'Edit', edit_american_navy_vessel_path(@american_navy_vessel) %> |
+<%= link_to 'Back', american_navy_vessels_path %>

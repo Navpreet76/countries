@@ -1,0 +1,2 @@
+module GermanNavyVesselsHelper
+end

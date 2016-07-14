@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing German Navy Vessels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Designation</th>
+      <th>Description</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @german_navy_vessels.each do |german_navy_vessel| %>
+      <tr>
+        <td><%= german_navy_vessel.name %></td>
+        <td><%= german_navy_vessel.designation %></td>
+        <td><%= german_navy_vessel.description %></td>
+        <td><%= german_navy_vessel.content %></td>
+        <td><%= link_to 'Show', german_navy_vessel %></td>
+        <td><%= link_to 'Edit', edit_german_navy_vessel_path(german_navy_vessel) %></td>
+        <td><%= link_to 'Destroy', german_navy_vessel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New German navy vessel', new_german_navy_vessel_path %>
+<br>
+<%= link_to 'Back', countries_path %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @united_state.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @united_state.description %>
+</p>
+
+<%= link_to 'Edit', edit_united_state_path(@united_state) %>
+<br>
+<%= link_to 'American Armored Vehicles', american_armors_path %>
+<br>
+<%= link_to 'American Aircraft', american_aircrafts_path %> 
+<br>
+<%= link_to 'American Units', american_units_path %>
+<br>
+<%= link_to 'American Navy', american_navy_vessels_path %>
+<br>
+<%= link_to 'Back', united_states_path %>
+
